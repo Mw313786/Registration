@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Application Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Application / Registration Form</h1>
+
+    <form id="appForm" method="post" action="submit.php" novalidate>
+      <label>Full Name
+        <input type="text" name="fullname" placeholder="Your full name" required>
+      </label>
+
+      <label>Father's Name
+        <input type="text" name="father" placeholder="Father's name">
+      </label>
+
+      <label>Gender
+        <select name="gender">
+          <option value="">-- Select --</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label>Email
+        <input type="email" name="email" placeholder="you@example.com" required>
+      </label>
+
+      <label>Phone
+        <input type="tel" name="phone" placeholder="10-digit phone">
+      </label>
+
+      <label>Address
+        <textarea name="address" rows="2" placeholder="Your address"></textarea>
+      </label>
+
+      <label>Date of Birth
+        <input type="date" name="dob">
+      </label>
+
+      <label>Qualification
+        <input type="text" name="qualification" placeholder="e.g. PUC / Diploma / BE CSE">
+      </label>
+
+      <label>Course applying for
+        <select name="course">
+          <option>Certificate in Web Dev</option>
+          <option>Diploma in Design</option>
+          <option selected>Bachelor Degree</option>
+        </select>
+      </label>
+
+      <label>Skills (comma separated)
+        <input type="text" name="skills" placeholder="HTML, CSS, JavaScript, PHP">
+      </label>
+
+      <label>Emergency Contact
+        <input type="text" name="emergency" placeholder="Contact name & phone">
+      </label>
+
+      <label>Short bio / reason
+        <textarea name="bio" rows="4" placeholder="Write a short bio..."></textarea>
+      </label>
+
+      <div class="actions">
+        <button type="submit">Submit Application</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+    <p class="note">This demo posts the form to a PHP file and prints the submitted data. Run this on XAMPP (Apache).</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
